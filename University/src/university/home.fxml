@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.HomeController" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-color: #f4f4f9;">
+    <children>
+        <!-- VBox to hold the header and the content -->
+        <VBox spacing="10" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" nodeOrientation="RIGHT_TO_LEFT">
+            
+            <!-- Header with navigation buttons -->
+            <ToolBar nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-color: #2c3e50;">
+                <Button text="إدارة المشاريع" onAction="#handleProjectManagement" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-size: 14px;"/>
+                <Button text="إدارة الأقسام" onAction="#handleDepartmentManagement" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-size: 14px;"/>
+                <Button text="إدارة الموظفين" onAction="#handleEmployeeManagement" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-size: 14px;"/>
+            </ToolBar>
+            
+            <!-- Main content placeholder -->
+            <AnchorPane fx:id="contentArea" prefHeight="500" prefWidth="600" style="-fx-background-color: #ffffff; -fx-padding: 20;">
+                <children>
+                    <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" nodeOrientation="RIGHT_TO_LEFT" style="-fx-alignment: center; -fx-background-color: #ecf0f1; -fx-padding: 15; -fx-border-color: #bdc3c7; -fx-border-width: 2; -fx-border-radius: 5;">
+                        <!-- محتويات المنطقة هنا -->
+                    </VBox>
+                </children>
+            </AnchorPane>
+
+            <!-- Footer -->
+            <ToolBar prefHeight="30" nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-color: #2c3e50;">
+                <Label text="© 2024 Company Name - All Rights Reserved" style="-fx-text-fill: white; -fx-font-size: 12px;" />
+            </ToolBar>
+        </VBox>
+    </children>
+</AnchorPane>

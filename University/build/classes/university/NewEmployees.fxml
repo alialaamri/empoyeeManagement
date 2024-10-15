@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="university.EmployeeController">
+     <children>
+        <VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #ffffff; -fx-border-color: #dee2e6; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <!-- عنوان الشاشة -->
+            <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="إدارة الموظفين" />
+
+            <!-- حقل إدخال معرف الموظف -->
+          
+
+            <!-- حقل إدخال اسم الموظف -->
+            <HBox spacing="10">
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #495057;" text="اسم الموظف:" />
+                <TextField fx:id="employeeNameField" promptText="أدخل اسم الموظف" style="-fx-pref-width: 250px; -fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-border-radius: 5; -fx-padding: 5;" />
+            </HBox>
+
+            <!-- حقل إدخال المسمى الوظيفي -->
+            <HBox spacing="10">
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #495057;" text="المسمى الوظيفي:" />
+                <TextField fx:id="positionField" promptText="أدخل المسمى الوظيفي" style="-fx-pref-width: 250px; -fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-border-radius: 5; -fx-padding: 5;" />
+            </HBox>
+
+            <!-- حقل إدخال معرف القسم  -->
+            <HBox spacing="10">
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #495057;" text="اسم القسم:" />
+                <ComboBox fx:id="departmentComboBox" promptText="اختر القسم" style="-fx-pref-width: 250px; -fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-border-radius: 5; -fx-padding: 5;" />
+            </HBox>
+
+            <!-- أزرار الإضافة، التحديث، الحذف -->
+            <HBox spacing="15">
+                <Button fx:id="addButton" onAction="#handleAddEmployee" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 100px; -fx-border-radius: 5;" text="إضافة موظف" />
+                <Button fx:id="updateButton" onAction="#handleUpdateEmployee" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 100px; -fx-border-radius: 5;" text="تحديث موظف" />
+                <Button fx:id="deleteButton" onAction="#handleDeleteEmployee" style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 100px; -fx-border-radius: 5;" text="حذف موظف" />
+            </HBox>
+
+            <!-- Label to show messages -->
+            <Label fx:id="messageLabel" style="-fx-font-size: 14px; -fx-text-fill: #FF0000;" />
+
+            <!-- جدول عرض الموظفين -->
+            
+             <TableView fx:id="employeesTable" prefHeight="200" prefWidth="556.0" style="-fx-background-color: #ffffff; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+                <columns>
+                    <TableColumn fx:id="employeeIdColumn" prefWidth="100" resizable="true" text="رقم الموظف">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="employeeId" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="employeeNameColumn" prefWidth="200" resizable="true" text="اسم الموظف">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="employeeName" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="positionColumn" prefWidth="150" resizable="true" text="المسمى الوظيفي">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="position" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="departmentIdColumn" prefWidth="150" resizable="true" text="رقم القسم">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="departmentId" />
+                        </cellValueFactory>
+                    </TableColumn>
+                        <TableColumn fx:id="departmentNameColumn" prefWidth="150" resizable="true" text="اسم القسم">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="departmentName" />
+                        </cellValueFactory>
+                    </TableColumn>
+                   
+                </columns>
+            </TableView>
+            
+          
+        
+          
+        </VBox>
+    </children>
+</AnchorPane>

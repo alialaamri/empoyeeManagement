@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.Region?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="university.ProjectManagementController" style="-fx-background-color: #f9f9f9;">
+    <VBox alignment="CENTER" spacing="20.0" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0"
+          nodeOrientation="RIGHT_TO_LEFT" style="-fx-padding: 20px;">
+          
+        <HBox alignment="CENTER" spacing="10.0" style="-fx-padding: 10px;">
+            <TextField fx:id="projectNameField" promptText="اسم المشروع" style="-fx-font-size: 14px;"/>
+            <ComboBox fx:id="employeeNameComboBox" promptText="اسم الموظف" style="-fx-font-size: 14px;"/>
+        </HBox>
+        
+        <HBox alignment="CENTER" spacing="10.0" style="-fx-padding: 10px;">
+            <Button fx:id="addButton" text="إضافة" onAction="#handleAddProject"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8px 16px;"/>
+            <Button fx:id="updateButton" text="تعديل" onAction="#handleUpdateProject"
+                    style="-fx-background-color: #FFC107; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8px 16px;"/>
+            <Button fx:id="deleteButton" text="حذف" onAction="#handleDeleteProject"
+                    style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 8px 16px;"/>
+        </HBox>
+        
+        <Label fx:id="messageLabel" style="-fx-font-size: 14px; -fx-text-fill: #FF5722;"/>
+        
+        <TableView fx:id="projectsTable" style="-fx-padding: 10px;">
+            <columns>
+                <TableColumn fx:id="projectNameColumn" text="اسم المشروع" style="-fx-font-size: 14px;"/>
+                <TableColumn fx:id="employeeNameColumn" text="اسم الموظف" style="-fx-font-size: 14px;"/>
+                <TableColumn fx:id="employeesIdColumn" text="رقم الموظف" style="-fx-font-size: 14px;"/>
+            </columns>
+        </TableView>
+        
+        <!-- Add some space to push the table downwards -->
+        <Region prefHeight="20.0"/>
+    </VBox>
+</AnchorPane>

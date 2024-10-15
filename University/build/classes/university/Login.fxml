@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.LoginController" prefHeight="400" prefWidth="450" style="-fx-background-color: #e9ecef;" nodeOrientation="RIGHT_TO_LEFT">
+    <children>
+        <VBox spacing="20" layoutX="25" layoutY="50" style="-fx-padding: 20; -fx-background-color: #ffffff; -fx-border-color: #dee2e6; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <!-- عنوان الشاشة -->
+            <Label text="تسجيل الدخول" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+            <!-- حقل إدخال اسم المستخدم -->
+            <TextField fx:id="usernameField" promptText="اسم المستخدم" style="-fx-pref-width: 350px; -fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-border-radius: 5; -fx-padding: 10;" />
+
+            <!-- حقل إدخال كلمة المرور -->
+            <PasswordField fx:id="passwordField" promptText="كلمة المرور" style="-fx-pref-width: 350px; -fx-background-color: #f8f9fa; -fx-border-color: #ced4da; -fx-border-radius: 5; -fx-padding: 10;" />
+
+            <!-- زر تسجيل الدخول -->
+            <Button fx:id="loginButton" text="تسجيل الدخول" onAction="#handleLogin" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 350px; -fx-border-radius: 5;" />
+            
+            <!-- رسالة خطأ في حالة فشل تسجيل الدخول -->
+            <Label fx:id="errorMessage" text="" style="-fx-text-fill: red; -fx-font-size: 14px;" visible="false" />
+        </VBox>
+    </children>
+</AnchorPane>

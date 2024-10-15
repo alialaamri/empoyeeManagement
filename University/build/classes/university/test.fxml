@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="university.TestController">
+     <children>
+        <!-- VBox to hold the header and the content -->
+        <VBox spacing="10" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+            
+            <!-- Header with navigation buttons -->
+            <ToolBar>
+                <Button text="إدارة المشاريع" onAction=""/>
+                <Button text="إدارة الأقسام" onAction=""/>
+                <Button text="إدارة الموظفين" onAction=""/>
+            </ToolBar>
+            
+            <!-- Main content placeholder (label as an example) -->
+            <AnchorPane fx:id="contentArea" prefHeight="300" prefWidth="600">
+                <children>
+                    <Label fx:id="label" layoutX="200" layoutY="150" text="Welcome to the Management System!" />
+                </children>
+            </AnchorPane>
+
+            <!-- Footer -->
+            <ToolBar prefHeight="30">
+                <Label text="© 2024 Company Name - All Rights Reserved" />
+            </ToolBar>
+        </VBox>
+    </children>
+</AnchorPane>
+
+
+
+
